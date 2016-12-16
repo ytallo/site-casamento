@@ -1076,13 +1076,13 @@ input, textarea {
 	padding: 0px 40px;
 }
 .logo-s2 {
-	width: 7%;
+	width: 10%;
 	display: inline-block;
 	vertical-align: top;
-	padding: 0px 0px;
+	padding: 20px 0px;
 }
 .ver-menu, .ver-menu-s2 {
-	width: 89%;
+	width: 100%;
 	display: inline-block;
 }
 .menubar-s2 {
