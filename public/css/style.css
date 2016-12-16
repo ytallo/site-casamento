@@ -505,7 +505,7 @@ input, textarea {
 }
 .the-people h4 {
 	color: #000;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'honey script';
 }
 .the-people p {
 	color: #000;
@@ -1076,10 +1076,10 @@ input, textarea {
 	padding: 0px 40px;
 }
 .logo-s2 {
-	width: 10%;
+	width: 7%;
 	display: inline-block;
 	vertical-align: top;
-	padding: 28px 0px;
+	padding: 0px 0px;
 }
 .ver-menu, .ver-menu-s2 {
 	width: 89%;
@@ -2650,5 +2650,8 @@ ul.timeline > li > .timeline-badge {
 	position: absolute;
 	top: 41%;
 	left: 42%;
+}
+.font-casamento {
+	font-family: 'honey script';
 }
 }
