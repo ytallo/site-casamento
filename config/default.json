@@ -1,0 +1,19 @@
+{
+  "SECRET": "",
+
+  "VERBOSE": true,
+  "SYNC": true,
+
+  "PORT": 8080,
+  "ALLOW_ORIGIN": "http://localhost:8080",
+
+  "DB_DIALECT": "mysql",
+  "DB_HOST": "localhost",
+  "DB_PORT": 3306,
+  "DB_NAME": "casamento",
+  "DB_USERNAME": "root",
+  "DB_PASSWORD": "1901",
+  "DB_POOL_MAX_CONNECTIONS": 5,
+  "DB_POOL_MAX_IDLE_TIME": 30,
+  "DB_MAX_CONCURRENT_QUERIES": 50
+}
