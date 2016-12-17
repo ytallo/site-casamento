@@ -73,6 +73,14 @@ $(document).on('ready', function () {
         }
     });
 
+    $('#exampleTable').DataTable({
+        "ajax": "gift/",
+        "columns": [
+            { "data": "name" },
+            { "data": "description" },
+            { "data": "have"}
+        ]
+    });
 
     /*Timer for wedding page*/
     if ($.find('#example').length) {

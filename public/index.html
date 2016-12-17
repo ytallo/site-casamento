@@ -21,6 +21,7 @@
 <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="css/animate.css">
 <link type="text/css" rel="stylesheet" href="css/hover.css">
+<link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css">
 <script src="js/modernizr.custom.js"></script>
 <title>Anna e Ytallo</title>
 <style>
@@ -1102,42 +1103,24 @@
                   <div class="col-md-12">
                     <h3>Lista de presentes</h3>
                   </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive  zoomeffect" src="images/beyond.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive  zoomeffect" src="images/decor.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/gifts.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/john.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/gifts.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/luckxry.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/belk.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/decor.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/gifts.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/john.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/john.png" alt="giftlogo" /> </div>
-                    </a> </div>
-                  <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 text-center wow bounceIn" data-class="bounceIn"> <a href="#" target="_blank">
-                    <div class="logo-box"> <img class="img-responsive zoomeffect" src="images/john.png" alt="giftlogo" /> </div>
-                    </a> </div>
+                  <table id="exampleTable" class="display" cellspacing="0" width="100%">
+                      <thead>
+                          <tr>
+                              <th>Nome</th>
+                              <th>Descrição</th>
+                              <th>Possui</th>
+                              <th>Ação</th>
+                          </tr>
+                      </thead>
+                      <tfoot>
+                          <tr>
+                              <th>Nome</th>
+                              <th>Descrição</th>
+                              <th>Possui</th>
+                              <th>Ação</th>
+                          </tr>
+                      </tfoot>
+                  </table>
                 </div>
               </div>
             </div>
@@ -1161,7 +1144,7 @@
                       <p> Se você recebeu nosso convite, por favor, confirme sua presença aqui, até o dia: <br>
                         <span>22 Dez 2016</span> </p>
                       <div id="Success" class="successalert" style=" display:none;"> <strong>Obrigado</strong>. </div>
-                      <div id="Error" class="errorelert" style="display:none;"> <strong>Erro ao enviar email.</strong> Tente novamente. </div>
+                      <div id="Error" class="errorelert" style="display:none;"> <strong>Erro ao confirmar presença.</strong> Tente novamente. </div>
                       <form class="form floating-label text-left form-validate" name="frm" id="frm">
                         <div class="form-group">
                           <input type="text" class="form-control" id="Name" name="Name" required data-rule-minlength="2" />
@@ -1678,5 +1661,6 @@
 <script type="text/javascript" src="js/wow.js"></script> 
 <script type="text/javascript" src="js/jquery.validate.min.js"></script> 
 <script type="text/javascript" src="js/formValidation.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 </body>
 </html>
