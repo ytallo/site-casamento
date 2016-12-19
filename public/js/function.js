@@ -73,14 +73,50 @@ $(document).on('ready', function () {
         }
     });
 
-    $('#exampleTable').DataTable({
-        "ajax": "gift/",
+    var giftTable = $('#giftTable').DataTable({
+        "ajax": {
+            "url" : "/gift",
+            "dataSrc": ""
+        },
+        "columnDefs": [ {
+                "targets": 1,
+                "data": "have",
+                "defaultContent": "",
+                "render": function ( data, type, row ) {
+                    return data == 1 ? 'Não' : 'Sim';
+                }
+            }, {
+                "targets": 2,
+                "data": null,
+                "render": function ( data, type, row ) {
+                    var btnReservar = "<button class=\"btn\">Reservar!</button>",
+                        btnReservado = "<button class=\"btn\" disabled>Reservado</button>"; 
+                    return (data.have == 0) || (data.reserved == 0)  ? btnReservado : btnReservar;
+                }
+            } 
+        ],
         "columns": [
             { "data": "name" },
-            { "data": "description" },
-            { "data": "have"}
+            { "data": "have"},
+            { "data": null }
         ]
     });
+
+    $('#giftTable tbody').on( 'click', 'button', function () {
+        var data = giftTable.row( $(this).parents('tr') ).data();
+        $.ajax({ 
+		    url: '/gift/reserve',
+            type: 'post',
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (data) {
+               swal("Reserva feita com sucesso!", "Caso desista da reserva, contate os noivos.", "success");
+            },
+			error: function (data) {
+				swal("Erro na operação!", "Não foi possível completar a operação.", "error");
+			}
+		});
+    } );
 
     /*Timer for wedding page*/
     if ($.find('#example').length) {

@@ -10,7 +10,8 @@ module.exports = function (sequelize, DataTypes) {
 
         name : DataTypes.STRING,
         description : DataTypes.STRING,
-        have : DataTypes.INTEGER
+        have : DataTypes.INTEGER,
+        reserved : DataTypes.INTEGER
     }, {
         timestamps : true,
         tableName : 'gift'

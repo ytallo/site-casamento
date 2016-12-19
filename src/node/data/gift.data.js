@@ -10,7 +10,8 @@ module.exports = function giftModel(SaphyreData, models) {
         '$id' : 'id',
         'name' : 'name',
         'have' : 'have',
-        'description' : 'description'
+        'description' : 'description',
+        'reserved' : 'reserved'
     });
 
     model.sort('creation', {
